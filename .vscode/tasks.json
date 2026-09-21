@@ -1,0 +1,42 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Chessboxing",
+            "command": "C:\\TDM-GCC-64\\bin\\gcc.exe",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "-I${workspaceFolder}/SDL3/x86_64-w64-mingw32/include",
+                "-I${workspaceFolder}/SDL3_ttf/x86_64-w64-mingw32/include",
+                "-L${workspaceFolder}/SDL3/x86_64-w64-mingw32/lib",
+                "-L${workspaceFolder}/SDL3_ttf/x86_64-w64-mingw32/lib",
+                "${workspaceFolder}/src/main.c",
+                "${workspaceFolder}/src/game.c",
+                "${workspaceFolder}/src/chess.c",
+                "${workspaceFolder}/src/boxing.c",
+                "${workspaceFolder}/src/renderer.c",
+                "${workspaceFolder}/src/ai.c",
+                "${workspaceFolder}/src/network.c",
+                "-lSDL3",
+                "-lSDL3_ttf",
+                "-lws2_32",
+                "-o",
+                "${workspaceFolder}/chessboxing.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build full Chessboxing executable with SDL3, SDL3_ttf, AI, and Winsock2"
+        }
+    ],
+    "version": "2.0.0"
+}
